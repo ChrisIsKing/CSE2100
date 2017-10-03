@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6AB0D7C1F83435600178CE9"
-               BuildableName = "Lab1 (Sigma)"
-               BlueprintName = "Lab1 (Sigma)"
-               ReferencedContainer = "container:Lab1 (Sigma).xcodeproj">
+               BlueprintIdentifier = "F6AB0D8F1F8345FF00178CE9"
+               BuildableName = "Lab 1 (Binary Search)"
+               BlueprintName = "Lab 1 (Binary Search)"
+               ReferencedContainer = "container:Lab 1 (Binary Search).xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6AB0D7C1F83435600178CE9"
-            BuildableName = "Lab1 (Sigma)"
-            BlueprintName = "Lab1 (Sigma)"
-            ReferencedContainer = "container:Lab1 (Sigma).xcodeproj">
+            BlueprintIdentifier = "F6AB0D8F1F8345FF00178CE9"
+            BuildableName = "Lab 1 (Binary Search)"
+            BlueprintName = "Lab 1 (Binary Search)"
+            ReferencedContainer = "container:Lab 1 (Binary Search).xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6AB0D7C1F83435600178CE9"
-            BuildableName = "Lab1 (Sigma)"
-            BlueprintName = "Lab1 (Sigma)"
-            ReferencedContainer = "container:Lab1 (Sigma).xcodeproj">
+            BlueprintIdentifier = "F6AB0D8F1F8345FF00178CE9"
+            BuildableName = "Lab 1 (Binary Search)"
+            BlueprintName = "Lab 1 (Binary Search)"
+            ReferencedContainer = "container:Lab 1 (Binary Search).xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6AB0D7C1F83435600178CE9"
-            BuildableName = "Lab1 (Sigma)"
-            BlueprintName = "Lab1 (Sigma)"
-            ReferencedContainer = "container:Lab1 (Sigma).xcodeproj">
+            BlueprintIdentifier = "F6AB0D8F1F8345FF00178CE9"
+            BuildableName = "Lab 1 (Binary Search)"
+            BlueprintName = "Lab 1 (Binary Search)"
+            ReferencedContainer = "container:Lab 1 (Binary Search).xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
