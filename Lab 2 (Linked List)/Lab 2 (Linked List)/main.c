@@ -68,6 +68,7 @@ int main(int argc, const char * argv[]) {
 bool insert_node(int value)
 {
     return true;
+    
 }
 
 /**
