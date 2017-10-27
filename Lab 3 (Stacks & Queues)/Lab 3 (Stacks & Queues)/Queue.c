@@ -13,7 +13,7 @@
  * so that it will be retrived after the other elements already in the
  * queue.
  */
-bool enqueue(char* str, queue q)
+bool enqueue(char* str, queue* q)
 {
     // TODO
     return true;
@@ -24,8 +24,8 @@ bool enqueue(char* str, queue q)
  * the "first-in, first-out" (FIFO) ordering of the data structure.
  * Reduces the size of the queue and adjusts the head to the next element.
  */
-char* dequeue(queue q)
+char* dequeue(queue* q)
 {
     // TODO
-    return q.strings[0];
+    return q->strings[0];
 }

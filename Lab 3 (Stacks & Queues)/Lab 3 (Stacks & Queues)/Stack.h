@@ -25,7 +25,7 @@ typedef struct
 } stack;
 
 /* function declarations */
-bool push(char* str, stack s);
-char* pop(stack s);
+bool push(char* str, stack* s);
+char* pop(stack* s);
 
 #endif /* Stack_h */

@@ -29,7 +29,7 @@ typedef struct
 } queue;
 
 /* function declarations */
-bool enqueue(char* str, queue q);
-char* dequeue(queue q);
+bool enqueue(char* str, queue* q);
+char* dequeue(queue* q);
 
 #endif /* Queue_h */

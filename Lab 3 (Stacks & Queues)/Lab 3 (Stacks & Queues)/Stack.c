@@ -12,14 +12,20 @@
  * Puts a new element into the stack onto the "top" of the data structure
  * so that it will be retrived prior to the elements already in the stack.
  */
-bool push(char* str, stack s)
+bool push(char* str, stack* s)
 {
     // TODO
     
     // check if stack is at CAPACITY
     // store element at tail
     // increment size
-    return true;
+    if (s->size == CAPACITY) {
+        return false;
+    } else {
+        s->strings[s->size] = str;
+        s->size++;
+        return true;
+    }
 }
 
 /**
@@ -27,7 +33,7 @@ bool push(char* str, stack s)
  * the "last-in, first-out" (LIFO) ordering of the data structure. Reduces
  * the size of the stack.
  */
-char* pop(stack s)
+char* pop(stack* s)
 {
     // TODO
     
@@ -35,5 +41,5 @@ char* pop(stack s)
     // decrement size
     // return last element
     
-    return s.strings[0];
+    return s->strings[0];
 }

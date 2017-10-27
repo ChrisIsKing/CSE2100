@@ -17,10 +17,10 @@
 #include "Queue.h"
 
 // declare a stack (as a global variable)
-stack s;
+stack* s;
 
 // declare a queue (as a global variable)
-queue q;
+queue* q;
 
 // testing functions decleration
 void test_push();
@@ -32,6 +32,9 @@ void test_queue();
  */
 int main(void)
 {
+    s = malloc(sizeof(stack));
+    q = malloc(sizeof(queue));
+
     test_push();
     //test_pop();
     //test_queue();
@@ -39,7 +42,7 @@ int main(void)
 
 void test_push() {
     // initialize the stack
-    s.size = 0;
+    s->size = 0;
     
     printf("Pushing %i strings onto the stack...\n", CAPACITY);
     for (int i = 0; i < CAPACITY; i++)
@@ -52,7 +55,7 @@ void test_push() {
     printf("done!\n");
     
     printf("Making sure that the stack size is indeed %i...", CAPACITY);
-    assert(s.size == CAPACITY);
+    assert(s->size == CAPACITY);
     printf("good!\n");
     
     printf("Making sure that push() now returns false...");
@@ -65,14 +68,14 @@ void test_push() {
 
 void test_pop() {
     // initialize the stack
-    s.size = 10;
+    s->size = 10;
     
     printf("Pushing %i strings onto the stack...", CAPACITY);
     for (int i = 0; i < CAPACITY; i++)
     {
         char str[12];
         sprintf(str, "%i", i);
-        s.strings[i] = strdup(str);
+        s->strings[i] = strdup(str);
     }
     
     printf("done!\n");
@@ -96,7 +99,7 @@ void test_pop() {
     printf("good!\n");
     
     printf("Making sure that the stack is now empty...");
-    assert(s.size == 0);
+    assert(s->size == 0);
     printf("good!\n");
     
     printf("Making sure that pop() now returns NULL...");
@@ -109,8 +112,8 @@ void test_pop() {
 
 void test_queue() {
     // initialize the queue
-    q.head = 0;
-    q.size = 0;
+    q->head = 0;
+    q->size = 0;
     
     printf("Enqueueing %i strings...", CAPACITY);
     for (int i = 0; i < CAPACITY; i++)
@@ -122,7 +125,7 @@ void test_queue() {
     printf("done!\n");
     
     printf("Making sure that the queue size is indeed %i...", CAPACITY);
-    assert(q.size == CAPACITY);
+    assert(q->size == CAPACITY);
     printf("good!\n");
     
     printf("Making sure that enqueue() now returns false...");
@@ -148,7 +151,7 @@ void test_queue() {
     printf("good!\n");
     
     printf("Making sure that the queue is now empty...");
-    assert(q.size == 0);
+    assert(q->size == 0);
     printf("good!\n");
     
     printf("Making sure that dequeue() now returns NULL...");
