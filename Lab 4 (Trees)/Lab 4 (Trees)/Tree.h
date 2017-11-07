@@ -23,5 +23,6 @@ node;
 // function protoypes
 bool search(node* root, int val);
 bool insert(node* root, int val);
+node* insert_node(int val);
 
 #endif /* Tree_h */

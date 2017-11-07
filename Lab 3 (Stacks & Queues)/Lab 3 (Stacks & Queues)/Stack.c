@@ -17,15 +17,16 @@ bool push(char* str, stack* s)
     // TODO
     
     // check if stack is at CAPACITY
-    // store element at tail
-    // increment size
     if (s->size == CAPACITY) {
         return false;
     } else {
+        // store element at tail
         s->strings[s->size] = str;
+        // increment size
         s->size++;
         return true;
     }
+    
 }
 
 /**
@@ -38,8 +39,13 @@ char* pop(stack* s)
     // TODO
     
     // check if there are elements to pop
-    // decrement size
-    // return last element
+    if (s->size == 0) {
+        return NULL;
+    }
     
-    return s->strings[0];
+    // decrement size
+    s->size--;
+    // return last element
+    return s->strings[s->size];
+    
 }

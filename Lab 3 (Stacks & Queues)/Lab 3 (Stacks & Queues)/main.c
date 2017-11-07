@@ -36,8 +36,8 @@ int main(void)
     q = malloc(sizeof(queue));
 
     test_push();
-    //test_pop();
-    //test_queue();
+    test_pop();
+    test_queue();
 }
 
 void test_push() {

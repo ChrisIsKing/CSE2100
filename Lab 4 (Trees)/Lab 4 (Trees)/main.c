@@ -8,8 +8,8 @@
 
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "Tree.h"
+
 
 // Global Variable too root of Tree
 node* root;

@@ -15,7 +15,14 @@
  */
 bool enqueue(char* str, queue* q)
 {
-    // TODO
+    // Check if queue is full
+    if (q->size == CAPACITY) {
+        return false;
+    }
+    // add element to queue
+    q->strings[q->size] = str;
+    // increment size
+    q->size++;
     return true;
 }
 
@@ -26,6 +33,19 @@ bool enqueue(char* str, queue* q)
  */
 char* dequeue(queue* q)
 {
-    // TODO
-    return q->strings[0];
+    // Checks if queque is empty
+    if (q->size == 0) {
+        return NULL;
+    }
+    // collects string
+    char* str = q->strings[q->head];
+    // increments head
+    q->head++;
+    // decrements size
+    q->size--;
+    // resets head so beginning of queue
+    if (q->head == CAPACITY) {
+        q->head = 0;
+    }
+    return str;
 }

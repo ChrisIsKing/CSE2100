@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 // typedef a node for the linked list
 typedef struct node
@@ -67,6 +68,64 @@ int main(int argc, const char * argv[]) {
  */
 bool insert_node(int value)
 {
+    // malloc space for a new node
+    node* new_node = malloc(sizeof(node));
+    if (new_node == NULL)
+    {
+        return false;
+    }
+    new_node->n = value;
+    
+    // first insertion
+    if (head == NULL)
+    {
+        new_node->next = head;
+        head = new_node;
+        return true;
+    }
+    
+    // keep track of current and previous nodes
+    node* curr = head;
+    node* prev = NULL;
+    
+    while (curr != NULL)
+    {
+        // don't insert duplicates
+        if (value == curr->n)
+        {
+            free(new_node);
+            return false;
+        }
+        
+        // keep looking for correct spot
+        else if (value > curr->n)
+        {
+            prev = curr;
+            curr = curr->next;
+            
+            if (curr == NULL)
+            {
+                break;
+            }
+        }
+        
+        else if (value < curr->n)
+        {
+            break;
+        }
+    }
+    
+    // insert the node in the correct position
+    new_node->next = curr;
+    if (prev == NULL)
+    {
+        head = new_node;
+    }
+    else
+    {
+        prev->next = new_node;
+    }
+    
     return true;
     
 }
@@ -76,7 +135,16 @@ bool insert_node(int value)
  */
 void print_nodes(node* list)
 {
-
+    // save a counter
+    int counter = 0;
+    
+    node* curr = head;
+    while (curr != NULL)
+    {
+        counter++;
+        printf("Node %d: %d\n", counter, curr->n);
+        curr = curr->next;
+    }
 }
 
 /**
@@ -84,5 +152,14 @@ void print_nodes(node* list)
  */
 void free_nodes(node* list)
 {
-
+    // don't lose the rest of the list
+    node* curr = head;
+    node* prev = NULL;
+    
+    while (curr != NULL)
+    {
+        prev = curr;
+        curr = curr->next;
+        free(prev);
+    }
 }
